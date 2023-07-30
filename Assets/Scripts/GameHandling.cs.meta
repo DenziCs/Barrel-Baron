@@ -3,7 +3,12 @@ guid: ca8c3ae1ddf1eff479d69b422cb8e9e6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - blackout: {instanceID: 0}
+  - speechBubbleStem: {instanceID: 0}
+  - speechBubble1: {instanceID: 0}
+  - button1: {instanceID: 0}
+  - button2: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

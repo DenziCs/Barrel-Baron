@@ -9,7 +9,7 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private Image blackout;
 
     [SerializeField] private Image speechBubbleStem;
-    [SerializeField] private Image speechBubble1;
+    [SerializeField] private GameObject speechBubble1;
 
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
@@ -21,6 +21,8 @@ public class GameHandling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speechBubble1 = GameObject.Find("Speech Bubble");
+        Debug.Log("Found gameObject with name " + speechBubble1.name);
         FadeIn();
     }
 
@@ -36,7 +38,7 @@ public class GameHandling : MonoBehaviour
             {
                 blackout.gameObject.SetActive(false);
                 isFadingIn = false;
-                speechBubbleStem.gameObject.SetActive(true);
+                //speechBubbleStem.gameObject.SetActive(true);
                 speechBubble1.gameObject.SetActive(true);
                 isTalking = true;
             }
@@ -58,7 +60,7 @@ public class GameHandling : MonoBehaviour
             Color currentColor = speechBubbleStem.color;
             currentColor.a += Time.deltaTime;
             speechBubbleStem.color = currentColor;
-            speechBubble1.color = currentColor;
+            //speechBubble1.color = currentColor;
             if (currentColor.a >= 1.0f)
             {
                 isTalking = false;
