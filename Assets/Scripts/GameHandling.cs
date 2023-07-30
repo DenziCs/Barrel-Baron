@@ -14,6 +14,11 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
 
+    private Text bubbleText;
+    // filepath of text
+    private string[] filePath;
+    private int lineIndex = 0;
+
     private bool isFadingIn = false;
     private bool isFadingOut = false;
     private bool isTalking = false;
@@ -21,6 +26,10 @@ public class GameHandling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < 12; i++)
+        {
+            filePath[i] = Application.dataPath + "/Text/Speech" + (i + 1) + ".txt";
+        }
         speechBubble1 = GameObject.Find("Speech Bubble");
         Debug.Log("Found gameObject with name " + speechBubble1.name);
         FadeIn();
