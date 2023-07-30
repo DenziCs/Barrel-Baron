@@ -9,15 +9,18 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private Image blackout;
 
     [SerializeField] private Image speechBubbleStem;
-    [SerializeField] private GameObject speechBubble1;
+    [SerializeField] private Text speechBubble;
+    // [SerializeField] private Text dialogueOption1;
+    // [SerializeField] private Text dialogueOption2;
 
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
 
-    private Text bubbleText;
+    // private Text bubbleText;
     // filepath of text
     private string[] filePath;
     private int lineIndex = 0;
+    private int dialogueID = 0;
 
     private bool isFadingIn = false;
     private bool isFadingOut = false;
@@ -26,12 +29,14 @@ public class GameHandling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         for (int i = 0; i < 12; i++)
         {
             filePath[i] = Application.dataPath + "/Text/Speech" + (i + 1) + ".txt";
         }
-        speechBubble1 = GameObject.Find("Speech Bubble");
-        Debug.Log("Found gameObject with name " + speechBubble1.name);
+        */
+        // speechBubble1 = GameObject.Find("Speech Bubble");
+        // Debug.Log("Found gameObject with name " + speechBubble1.name);
         FadeIn();
     }
 
@@ -48,7 +53,7 @@ public class GameHandling : MonoBehaviour
                 blackout.gameObject.SetActive(false);
                 isFadingIn = false;
                 //speechBubbleStem.gameObject.SetActive(true);
-                speechBubble1.gameObject.SetActive(true);
+                speechBubble.gameObject.SetActive(true);
                 isTalking = true;
             }
         }
@@ -75,6 +80,27 @@ public class GameHandling : MonoBehaviour
                 isTalking = false;
                 button1.SetActive(true);
                 button2.SetActive(true);
+            }
+        }
+    }
+
+    public void ChangeDialogue(bool isOption1)
+    {
+        if (isOption1)
+        {
+            switch (dialogueID)
+            {
+                case 0: break;
+                case 1: break;
+            }
+        }
+
+        else
+        {
+            switch (dialogueID)
+            {
+                case 0: break;
+                case 1: break;
             }
         }
     }

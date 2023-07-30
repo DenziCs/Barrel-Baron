@@ -38,6 +38,6 @@ public class MainMenuButtonFunctions : MonoBehaviour
 
     private void ChangeScene()
     {
-        SceneManager.LoadScene("LoadingScreen");
+        SceneManager.LoadScene("GameScene");
     }
 }
