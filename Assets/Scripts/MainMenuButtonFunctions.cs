@@ -43,6 +43,6 @@ public class MainMenuButtonFunctions : MonoBehaviour
 
     private void ChangeScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("IntroScene");
     }
 }
