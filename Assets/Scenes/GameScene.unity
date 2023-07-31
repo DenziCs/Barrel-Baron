@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackout: {fileID: 478994008}
-  resultPopup: {fileID: 0}
+  resultPopup: {fileID: 6969582812486056095}
   button1: {fileID: 244235678}
   button2: {fileID: 729438033}
 --- !u!1 &686233176
@@ -2117,3 +2117,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+--- !u!114 &6969582812486056095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6969582811552548816, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
