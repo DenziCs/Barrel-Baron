@@ -1943,6 +1943,7 @@ MonoBehaviour:
   option1Text: {fileID: 244235678}
   option2Text: {fileID: 729438033}
   quarterObject: {fileID: 881191254}
+  resultsQuarterObject: {fileID: 6969582812486056096}
   gameHandler: {fileID: 597167741}
 --- !u!1 &2110821862
 GameObject:
@@ -2027,6 +2028,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 478994007}
     m_Modifications:
+    - target: {fileID: 1130590056377786994, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Quarter Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990311933826337006, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Money Symbol
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669004134846531834, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Results Body Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535047418947964238, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Satisfaction Text
+      objectReference: {fileID: 0}
     - target: {fileID: 6969582811552548818, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_Name
       value: Result Popup Window
@@ -2115,6 +2132,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7351956402444847462, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Satisfaction Symbol
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691869079918754938, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_Name
+      value: Money Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
 --- !u!114 &6969582812486056095 stripped
@@ -2128,3 +2153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6969582812486056096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1130590056377786994, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}

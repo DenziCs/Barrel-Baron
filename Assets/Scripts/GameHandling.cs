@@ -12,6 +12,11 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private Image moneyMeter;
     [SerializeField] private Image boardMeter;
 
+    [SerializeField] private GameObject moneySymbol;
+    [SerializeField] private GameObject boardSymbol;
+    [SerializeField] private GameObject moneyResultText;
+    [SerializeField] private GameObject boardResultText;
+
     private bool isFadingIn = false;
     private bool isFadingOut = false;
 
@@ -51,21 +56,25 @@ public class GameHandling : MonoBehaviour
 
     public void AddMoney()
     {
+        moneyResultText.GetComponent<Text>().text = "+";
         moneyMeter.fillAmount += 0.25f;
     }
 
     public void AddBoard()
     {
+        boardResultText.GetComponent<Text>().text = "+";
         boardMeter.fillAmount += 0.25f;
     }
 
     public void ReduceMoney()
     {
+        moneyResultText.GetComponent<Text>().text = "-";
         moneyMeter.fillAmount -= 0.25f;
     }
 
     public void ReduceBoard()
     {
+        boardResultText.GetComponent<Text>().text = "-";
         boardMeter.fillAmount -= 0.25f;
     }
 
