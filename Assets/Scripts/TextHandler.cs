@@ -10,6 +10,7 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private GameObject option1Text;
     [SerializeField] private GameObject option2Text;
     [SerializeField] private GameObject quarterObject;
+    [SerializeField] private GameObject resultsQuarterObject;
     [SerializeField] private GameHandling gameHandler;
 
     private string filepath;
@@ -55,7 +56,7 @@ public class TextHandler : MonoBehaviour
         StartCoroutine(AutoTextNoOptions());
     }
 
-    public void AdvanceDialogue()
+    public void AdvanceQuarter()
     {
         index += 1;
         if (index > 4)
@@ -67,6 +68,7 @@ public class TextHandler : MonoBehaviour
         targetText = File.ReadAllText(filepath);
 
         quarterObject.GetComponent<Text>().text = "Q" + index + " 20XX";
+        resultsQuarterObject.GetComponent<Text>().text = "Q" + index + " 20XX REVIEW";
                 
         option1Path = Application.dataPath + "/Text/Options" + index + "-1.txt";
         option2Path = Application.dataPath + "/Text/Options" + index + "-2.txt";
