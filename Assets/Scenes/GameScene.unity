@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackout: {fileID: 478994008}
-  resultPopup: {fileID: 1823723960}
+  resultPopup: {fileID: 0}
   button1: {fileID: 244235678}
   button2: {fileID: 729438033}
 --- !u!1 &686233176
@@ -1724,17 +1724,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604559744}
   m_CullTransparentMesh: 1
---- !u!114 &1823723960 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6969582811552548816, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
-  m_PrefabInstance: {fileID: 6969582812486056094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1849642864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,8 +1942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   option1Text: {fileID: 244235678}
   option2Text: {fileID: 729438033}
-  quarterObject: {fileID: 0}
-  gameHandler: {fileID: 0}
+  quarterObject: {fileID: 881191254}
+  gameHandler: {fileID: 597167741}
 --- !u!1 &2110821862
 GameObject:
   m_ObjectHideFlags: 0

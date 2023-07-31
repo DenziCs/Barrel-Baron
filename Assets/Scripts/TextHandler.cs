@@ -52,9 +52,27 @@ public class TextHandler : MonoBehaviour
         filepath = Application.dataPath + "/Text/Speech" + index + "-" + option + ".txt";
         targetText = File.ReadAllText(filepath);
 
-        index += 1;
-
         StartCoroutine(AutoTextNoOptions());
+    }
+
+    public void AdvanceDialogue()
+    {
+        index += 1;
+        if (index > 4)
+        {
+            index = 4;
+        }
+
+        filepath = Application.dataPath + "/Text/Speech" + index + ".txt";
+        targetText = File.ReadAllText(filepath);
+
+        quarterObject.GetComponent<Text>().text = "Q" + index + " 20XX";
+                
+        option1Path = Application.dataPath + "/Text/Options" + index + "-1.txt";
+        option2Path = Application.dataPath + "/Text/Options" + index + "-2.txt";
+
+        option1Text.GetComponentInChildren<Text>().text = File.ReadAllText(option1Path);
+        option2Text.GetComponentInChildren<Text>().text = File.ReadAllText(option2Path);
     }
 
     IEnumerator AutoText()
