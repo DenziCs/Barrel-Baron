@@ -18,6 +18,7 @@ public class TextHandler : MonoBehaviour
     private string option1Path;
     private string option2Path;
     private string targetText;
+    private string resultTargetText;
     private float letterPause = 0.05f;
 
     // which dialouge tree we're in
@@ -108,8 +109,8 @@ public class TextHandler : MonoBehaviour
 
     private void ResultsText(int option)
     {
-        string resultsFilePath = Application.dataPath + "/Text/Result" + index + "-" + option;
-        targetText = File.ReadAllText(filepath);
+        string resultsFilePath = Application.dataPath + "/Text/Result" + index + "-" + option + ".txt";
+        resultTargetText = File.ReadAllText(resultsFilePath);
     }
 
     public void AdvanceQuarter()
@@ -140,6 +141,8 @@ public class TextHandler : MonoBehaviour
 
     IEnumerator AutoText()
     {
+        textbox.text = "";
+
         foreach (char letter in targetText.ToCharArray())
         {
             textbox.text += letter;
@@ -173,7 +176,9 @@ public class TextHandler : MonoBehaviour
 
     IEnumerator AutoResultsText()
     {
-        foreach (char letter in targetText.ToCharArray())
+        resultsText.text = "";
+
+        foreach (char letter in resultTargetText.ToCharArray())
         {
             resultsText.text += letter;
 
