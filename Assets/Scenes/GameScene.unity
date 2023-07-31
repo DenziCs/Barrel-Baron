@@ -352,14 +352,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597167741}
-        m_TargetAssemblyTypeName: GameHandling, Assembly-CSharp
-        m_MethodName: ChangeDialogue
-        m_Mode: 6
+      - m_Target: {fileID: 1989006143}
+        m_TargetAssemblyTypeName: TextHandler, Assembly-CSharp
+        m_MethodName: ChooseOption
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -1331,14 +1331,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597167741}
-        m_TargetAssemblyTypeName: GameHandling, Assembly-CSharp
-        m_MethodName: ChangeDialogue
-        m_Mode: 6
+      - m_Target: {fileID: 1989006143}
+        m_TargetAssemblyTypeName: TextHandler, Assembly-CSharp
+        m_MethodName: ChooseOption
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2126,6 +2126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efac0070261ca049b5759d1ebb5901f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  option1Text: {fileID: 244235678}
+  option2Text: {fileID: 729438033}
 --- !u!1 &2036596214
 GameObject:
   m_ObjectHideFlags: 0
