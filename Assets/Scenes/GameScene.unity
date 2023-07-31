@@ -925,7 +925,6 @@ MonoBehaviour:
   moneyResultText: {fileID: 1154665801}
   boardResultText: {fileID: 2022291105}
   characterSprites:
-  - {fileID: 21300000, guid: b5dcba543d451f3489ea2bb8da7703d7, type: 3}
   - {fileID: 21300000, guid: d650e9c508b89f444bbd5343c19385d6, type: 3}
   - {fileID: 21300000, guid: 2ba43f91f1a9aef40a44e7e2b30f67d6, type: 3}
   - {fileID: 21300000, guid: b5dcba543d451f3489ea2bb8da7703d7, type: 3}

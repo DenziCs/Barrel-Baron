@@ -91,6 +91,7 @@ public class GameHandling : MonoBehaviour
 
     public void FadeIn()
     {
+        resultPopup.gameObject.SetActive(false);
         isFadingIn = true;
     }
 
