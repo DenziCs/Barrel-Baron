@@ -18,11 +18,16 @@ public class EndingHandler : MonoBehaviour
     private string lossDialogue = "So, you've just finished your first year as CEO. Unfortunately, the Board of Directors has not been impressed by your performance. You are being demoted.";
     private float letterPause = 0.05f;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         FadeIn();
         button1.SetActive(false);
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+
         StartCoroutine(AutoText());
     }
 
@@ -80,6 +85,13 @@ public class EndingHandler : MonoBehaviour
             {
                 textbox.text += letter;
 
+                audioSource.PlayOneShot(audioSource.clip);
+
+                if (letter == '.' || letter == '?' || letter == '!')
+                {
+                    yield return new WaitForSeconds (1.2f);
+                }
+
                 yield return new WaitForSeconds(letterPause);
             }
         }
@@ -89,6 +101,13 @@ public class EndingHandler : MonoBehaviour
             foreach (char letter in lossDialogue.ToCharArray())
             {
                 textbox.text += letter;
+
+                audioSource.PlayOneShot(audioSource.clip);
+
+                if (letter == '.' || letter == '?' || letter == '!')
+                {
+                    yield return new WaitForSeconds (1.2f);
+                }
 
                 yield return new WaitForSeconds(letterPause);
             }
