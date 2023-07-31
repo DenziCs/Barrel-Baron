@@ -125,8 +125,6 @@ public class TextHandler : MonoBehaviour
     public void AdvanceQuarter()
     {
         gameHandler.FadeIn();
-        
-        nameText.text = names[index-1];
 
         option1Text.SetActive(false);
         option2Text.SetActive(false);
@@ -136,6 +134,8 @@ public class TextHandler : MonoBehaviour
         {
             index = 4;
         }
+
+        nameText.text = names[index - 1];
 
         filepath = Application.dataPath + "/Text/Speech" + index + ".txt";
         targetText = File.ReadAllText(filepath);

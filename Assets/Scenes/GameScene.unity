@@ -1956,7 +1956,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 244
-    m_Alignment: 1
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1982,6 +1982,7 @@ MonoBehaviour:
   resultsQuarterObject: {fileID: 6969582812486056096}
   gameHandler: {fileID: 597167741}
   resultsText: {fileID: 1031747001}
+  nameText: {fileID: 987486975}
 --- !u!1 &2022291105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6535047418947964238, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
