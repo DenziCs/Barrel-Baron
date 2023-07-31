@@ -9,6 +9,8 @@ public class TextHandler : MonoBehaviour
     private Text textbox;
     [SerializeField] private GameObject option1Text;
     [SerializeField] private GameObject option2Text;
+    [SerializeField] private GameObject quarterObject;
+    [SerializeField] private GameHandling gameHandler;
 
     private string filepath;
     private string option1Path;
@@ -26,10 +28,12 @@ public class TextHandler : MonoBehaviour
         textbox.text = "";
 
         filepath = Application.dataPath + "/Text/Speech1.txt";
-        option1Path = Application.dataPath + "/Text/Options1.txt";
-        option2Path = Application.dataPath + "/Text/Options2.txt";
+        option1Path = Application.dataPath + "/Text/Options1-1.txt";
+        option2Path = Application.dataPath + "/Text/Options1-2.txt";
 
         targetText = File.ReadAllText(filepath);
+
+        quarterObject.GetComponent<Text>().text = "Q" + index + " 20XX";
 
         option1Text.GetComponentInChildren<Text>().text = File.ReadAllText(option1Path);
         option2Text.GetComponentInChildren<Text>().text = File.ReadAllText(option2Path);
@@ -42,13 +46,13 @@ public class TextHandler : MonoBehaviour
 
     public void ChooseOption(int option)
     {
-        int optionIndex = (index - 1) * 2;
-
         option1Text.SetActive(false);
         option2Text.SetActive(false);
 
         filepath = Application.dataPath + "/Text/Speech" + index + "-" + option + ".txt";
         targetText = File.ReadAllText(filepath);
+
+        index += 1;
 
         StartCoroutine(AutoTextNoOptions());
     }
@@ -78,6 +82,8 @@ public class TextHandler : MonoBehaviour
 
             yield return new WaitForSeconds (letterPause);
         }
+
+        gameHandler.FadeOut();
 
         yield return null;
     }
