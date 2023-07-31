@@ -13,6 +13,10 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private GameObject resultsQuarterObject;
     [SerializeField] private GameHandling gameHandler;
     [SerializeField] private Text resultsText;
+    [SerializeField] private Text nameText;
+
+    private string namesPath;
+    private string[] names;
 
     private string filepath;
     private string option1Path;
@@ -30,9 +34,14 @@ public class TextHandler : MonoBehaviour
         textbox = this.gameObject.GetComponent<Text>();
         textbox.text = "";
 
+        namesPath = Application.dataPath + "/Text/Names.txt";
+        names = File.ReadAllLines(namesPath);
+
         filepath = Application.dataPath + "/Text/Speech1.txt";
         option1Path = Application.dataPath + "/Text/Options1-1.txt";
         option2Path = Application.dataPath + "/Text/Options1-2.txt";
+
+        nameText.text = names[0];
 
         targetText = File.ReadAllText(filepath);
 
@@ -116,9 +125,11 @@ public class TextHandler : MonoBehaviour
     public void AdvanceQuarter()
     {
         gameHandler.FadeIn();
+        
+        nameText.text = names[index-1];
 
-        option1Text.SetActive(true);
-        option2Text.SetActive(true);
+        option1Text.SetActive(false);
+        option2Text.SetActive(false);
 
         index += 1;
         if (index > 4)
