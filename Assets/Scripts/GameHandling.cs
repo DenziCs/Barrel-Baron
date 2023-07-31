@@ -18,9 +18,9 @@ public class GameHandling : MonoBehaviour
 
     // private Text bubbleText;
     // filepath of text
-    private string[] filePath;
-    private int lineIndex = 0;
-    private int dialogueID = 0;
+    //private string[] filePath;
+    //private int lineIndex = 0;
+    //private int dialogueID = 0;
 
     private bool isFadingIn = false;
     private bool isFadingOut = false;
@@ -35,8 +35,9 @@ public class GameHandling : MonoBehaviour
             filePath[i] = Application.dataPath + "/Text/Speech" + (i + 1) + ".txt";
         }
         */
-        // speechBubble1 = GameObject.Find("Speech Bubble");
-        // Debug.Log("Found gameObject with name " + speechBubble1.name);
+        speechBubble = GameObject.Find("Speech Bubble").GetComponent<Text>();
+        Debug.Log("Found gameObject with name " + speechBubble.gameObject.name);
+        //speechBubble.gameObject.SetActive(false);
         FadeIn();
     }
 
@@ -69,7 +70,7 @@ public class GameHandling : MonoBehaviour
             }
         }
 
-        if (isTalking)
+        /*if (isTalking)
         {
             Color currentColor = speechBubbleStem.color;
             currentColor.a += Time.deltaTime;
@@ -81,28 +82,12 @@ public class GameHandling : MonoBehaviour
                 button1.SetActive(true);
                 button2.SetActive(true);
             }
-        }
+        }*/
     }
 
     public void ChangeDialogue(bool isOption1)
     {
-        if (isOption1)
-        {
-            switch (dialogueID)
-            {
-                case 0: break;
-                case 1: break;
-            }
-        }
-
-        else
-        {
-            switch (dialogueID)
-            {
-                case 0: break;
-                case 1: break;
-            }
-        }
+        
     }
 
     public void FadeIn()
