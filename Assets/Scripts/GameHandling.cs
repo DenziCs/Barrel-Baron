@@ -23,6 +23,7 @@ public class GameHandling : MonoBehaviour
     private bool isFadingIn = false;
     private bool isFadingOut = false;
     private int spriteIndex = 0;
+    private int quartersDone = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +101,22 @@ public class GameHandling : MonoBehaviour
         blackout.gameObject.SetActive(true);
         resultPopup.gameObject.SetActive(true);
         isFadingOut = true;
+    }
+
+    public void CheckGameOver()
+    {
+        quartersDone++;
+        if (quartersDone >= 4)
+        {
+            if (moneyMeter.fillAmount >= 0.5f && boardMeter.fillAmount >= 0.5f)
+            {
+                //win scene
+            }
+            else
+            {
+                //lose scene
+            }
+        }
     }
 
     public void QuitGame()
