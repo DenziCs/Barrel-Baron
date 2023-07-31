@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameHandling : MonoBehaviour
 {
     [SerializeField] private Image blackout;
+    [SerializeField] private Image resultPopup;
 
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
@@ -17,6 +18,7 @@ public class GameHandling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        resultPopup.gameObject.SetActive(false);
         FadeIn();
     }
 
