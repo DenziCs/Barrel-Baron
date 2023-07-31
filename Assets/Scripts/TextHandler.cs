@@ -12,6 +12,7 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private GameObject quarterObject;
     [SerializeField] private GameObject resultsQuarterObject;
     [SerializeField] private GameHandling gameHandler;
+    [SerializeField] private Text resultsText;
 
     private string filepath;
     private string option1Path;
@@ -53,11 +54,71 @@ public class TextHandler : MonoBehaviour
         filepath = Application.dataPath + "/Text/Speech" + index + "-" + option + ".txt";
         targetText = File.ReadAllText(filepath);
 
+        if (index == 1)
+        {
+            if (option == 1)
+            {
+                gameHandler.AddBoard();
+            }
+            if (option == 2)
+            {
+                gameHandler.ReduceBoard();
+            }
+        }
+        if (index == 2)
+        {
+            if (option == 1)
+            {
+                gameHandler.AddBoard();
+            }
+            if (option == 2)
+            {
+                gameHandler.ReduceBoard();
+            }
+        }
+        if (index == 3)
+        {
+            if (option == 1)
+            {
+                gameHandler.AddBoard();
+            }
+            if (option == 2)
+            {
+                gameHandler.ReduceMoney();
+                gameHandler.ReduceBoard();
+            }
+        }
+        if (index == 4)
+        {
+            if (option == 1)
+            {
+                gameHandler.AddBoard();
+            }
+            if (option == 2)
+            {
+                gameHandler.ReduceMoney();
+                gameHandler.ReduceBoard();
+            }
+        }
+
+        ResultsText(option);
+
         StartCoroutine(AutoTextNoOptions());
+    }
+
+    private void ResultsText(int option)
+    {
+        string resultsFilePath = Application.dataPath + "/Text/Result" + index + "-" + option;
+        targetText = File.ReadAllText(filepath);
     }
 
     public void AdvanceQuarter()
     {
+        gameHandler.FadeIn();
+
+        option1Text.SetActive(true);
+        option2Text.SetActive(true);
+
         index += 1;
         if (index > 4)
         {
@@ -104,6 +165,20 @@ public class TextHandler : MonoBehaviour
         }
 
         gameHandler.FadeOut();
+
+        StartCoroutine(AutoResultsText());
+
+        yield return null;
+    }
+
+    IEnumerator AutoResultsText()
+    {
+        foreach (char letter in targetText.ToCharArray())
+        {
+            resultsText.text += letter;
+
+            yield return new WaitForSeconds (letterPause);
+        }
 
         yield return null;
     }
