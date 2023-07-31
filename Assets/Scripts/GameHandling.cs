@@ -17,13 +17,18 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private GameObject moneyResultText;
     [SerializeField] private GameObject boardResultText;
 
+    [SerializeField] private Sprite[] characterSprites;
+    [SerializeField] private Image character;
+
     private bool isFadingIn = false;
     private bool isFadingOut = false;
+    private int spriteIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         resultPopup.gameObject.SetActive(false);
+        character.sprite = characterSprites[0];
         FadeIn();
     }
 
@@ -76,6 +81,12 @@ public class GameHandling : MonoBehaviour
     {
         boardResultText.GetComponent<Text>().text = "-";
         boardMeter.fillAmount -= 0.25f;
+    }
+
+    public void ChangeSprite()
+    {
+        spriteIndex++;
+        character.sprite = characterSprites[spriteIndex];
     }
 
     public void FadeIn()

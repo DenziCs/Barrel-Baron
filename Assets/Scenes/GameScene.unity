@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &141997734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2990311933826337006, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209523634
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +920,23 @@ MonoBehaviour:
   resultPopup: {fileID: 6969582812486056095}
   moneyMeter: {fileID: 946805817}
   boardMeter: {fileID: 1604559746}
+  moneySymbol: {fileID: 141997734}
+  boardSymbol: {fileID: 603780685}
+  moneyResultText: {fileID: 1154665801}
+  boardResultText: {fileID: 2022291105}
+  characterSprites:
+  - {fileID: 21300000, guid: b5dcba543d451f3489ea2bb8da7703d7, type: 3}
+  - {fileID: 21300000, guid: d650e9c508b89f444bbd5343c19385d6, type: 3}
+  - {fileID: 21300000, guid: 2ba43f91f1a9aef40a44e7e2b30f67d6, type: 3}
+  - {fileID: 21300000, guid: b5dcba543d451f3489ea2bb8da7703d7, type: 3}
+  - {fileID: 21300000, guid: afb73872d32940f4ca8b7c8aacbf77f9, type: 3}
+  - {fileID: 21300000, guid: a666b666277ebc3458c198f3d9d53e4c, type: 3}
+  character: {fileID: 2110821864}
+--- !u!1 &603780685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7351956402444847462, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686233176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1445,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987486973}
   m_CullTransparentMesh: 1
+--- !u!114 &1031747001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3566858264975334048, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1154665801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7691869079918754938, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1207497282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1983,12 @@ MonoBehaviour:
   quarterObject: {fileID: 881191254}
   resultsQuarterObject: {fileID: 6969582812486056096}
   gameHandler: {fileID: 597167741}
+  resultsText: {fileID: 1031747001}
+--- !u!1 &2022291105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6535047418947964238, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+  m_PrefabInstance: {fileID: 6969582812486056094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110821862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2175,58 @@ PrefabInstance:
     - target: {fileID: 6969582811552548819, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 597167741}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 597167741}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FadeIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameHandling, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameHandling, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7351956402444847462, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_Name
