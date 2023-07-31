@@ -9,8 +9,8 @@ public class GameHandling : MonoBehaviour
     [SerializeField] private Image blackout;
     [SerializeField] private Image resultPopup;
 
-    [SerializeField] private GameObject button1;
-    [SerializeField] private GameObject button2;
+    [SerializeField] private Image moneyMeter;
+    [SerializeField] private Image boardMeter;
 
     private bool isFadingIn = false;
     private bool isFadingOut = false;
@@ -49,9 +49,24 @@ public class GameHandling : MonoBehaviour
         }
     }
 
-    public void ChangeDialogue(bool isOption1)
+    public void AddMoney()
     {
-        
+        moneyMeter.fillAmount += 0.25f;
+    }
+
+    public void AddBoard()
+    {
+        boardMeter.fillAmount += 0.25f;
+    }
+
+    public void ReduceMoney()
+    {
+        moneyMeter.fillAmount -= 0.25f;
+    }
+
+    public void ReduceBoard()
+    {
+        boardMeter.fillAmount -= 0.25f;
     }
 
     public void FadeIn()
@@ -62,6 +77,7 @@ public class GameHandling : MonoBehaviour
     public void FadeOut()
     {
         blackout.gameObject.SetActive(true);
+        resultPopup.gameObject.SetActive(true);
         isFadingOut = true;
     }
 
