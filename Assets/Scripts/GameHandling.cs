@@ -110,11 +110,11 @@ public class GameHandling : MonoBehaviour
         {
             if (moneyMeter.fillAmount >= 0.5f && boardMeter.fillAmount >= 0.5f)
             {
-                //win scene
+                SceneManager.LoadScene("WinScene");
             }
             else
             {
-                //lose scene
+                SceneManager.LoadScene("LossScene");
             }
         }
     }
