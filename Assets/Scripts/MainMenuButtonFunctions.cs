@@ -36,8 +36,13 @@ public class MainMenuButtonFunctions : MonoBehaviour
         Application.Quit();
     }
 
+    public void GoToLink(string url)
+    {
+        Application.OpenURL(url);
+    }
+
     private void ChangeScene()
     {
-        SceneManager.LoadScene("LoadingScreen");
+        SceneManager.LoadScene("GameScene");
     }
 }
