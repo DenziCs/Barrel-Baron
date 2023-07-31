@@ -913,8 +913,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackout: {fileID: 478994008}
   resultPopup: {fileID: 6969582812486056095}
-  button1: {fileID: 244235678}
-  button2: {fileID: 729438033}
+  moneyMeter: {fileID: 946805817}
+  boardMeter: {fileID: 1604559746}
 --- !u!1 &686233176
 GameObject:
   m_ObjectHideFlags: 0
