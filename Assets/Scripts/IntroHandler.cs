@@ -11,6 +11,8 @@ public class IntroHandler : MonoBehaviour
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
 
+    private AudioSource audioSource;
+
     private bool isFadingIn = false;
     private bool isFadingOut = false;
 
@@ -23,6 +25,9 @@ public class IntroHandler : MonoBehaviour
         FadeIn();
         button1.SetActive(false);
         button2.SetActive(false);
+        
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+
         StartCoroutine(AutoText());
     }
 
@@ -77,6 +82,13 @@ public class IntroHandler : MonoBehaviour
         foreach (char letter in introDialogue.ToCharArray())
         {
             textbox.text += letter;
+
+            audioSource.PlayOneShot(audioSource.clip);
+
+            if (letter == '.' || letter == '?' || letter == '!')
+            {
+                yield return new WaitForSeconds (1.2f);
+            }
 
             yield return new WaitForSeconds(letterPause);
         }
