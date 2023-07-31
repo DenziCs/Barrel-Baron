@@ -15,6 +15,8 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private Text resultsText;
     [SerializeField] private Text nameText;
 
+    private AudioSource audioSource;
+
     private string namesPath;
     private string[] names;
 
@@ -52,6 +54,8 @@ public class TextHandler : MonoBehaviour
 
         option1Text.SetActive(false);
         option2Text.SetActive(false);
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
 
         StartCoroutine(AutoText());
     }
@@ -160,6 +164,13 @@ public class TextHandler : MonoBehaviour
         {
             textbox.text += letter;
 
+            audioSource.PlayOneShot(audioSource.clip);
+
+            if (letter == '.' || letter == '?')
+            {
+                yield return new WaitForSeconds (1.2f);
+            }
+
             yield return new WaitForSeconds (letterPause);
         }
         
@@ -176,6 +187,13 @@ public class TextHandler : MonoBehaviour
         foreach (char letter in targetText.ToCharArray())
         {
             textbox.text += letter;
+            
+            audioSource.PlayOneShot(audioSource.clip);
+
+            if (letter == '.' || letter == '?')
+            {
+                yield return new WaitForSeconds (1.2f);
+            }
 
             yield return new WaitForSeconds (letterPause);
         }
@@ -195,6 +213,14 @@ public class TextHandler : MonoBehaviour
         foreach (char letter in resultTargetText.ToCharArray())
         {
             resultsText.text += letter;
+            
+            audioSource.PlayOneShot(audioSource.clip);
+
+            if (letter == '.' || letter == '?')
+            {
+                yield return new WaitForSeconds (1.2f);
+            }
+
 
             yield return new WaitForSeconds (letterPause);
         }
