@@ -3825,7 +3825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You've just been chosen to be the next CEO of Barrel Co. People will be
+  m_Text: You've just been chosen to be the next CEO of BarrelCo. People will be
     coming to you with company problems.
 --- !u!222 &716257825
 CanvasRenderer:
