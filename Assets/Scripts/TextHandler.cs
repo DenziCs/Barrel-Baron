@@ -55,6 +55,16 @@ public class TextHandler : MonoBehaviour
         filepath = Application.dataPath + "/Text/Speech" + index + "-" + option + ".txt";
         targetText = File.ReadAllText(filepath);
 
+        ResultsText(option);
+
+        StartCoroutine(AutoTextNoOptions());
+    }
+
+    private void ResultsText(int option)
+    {
+        string resultsFilePath = Application.dataPath + "/Text/Result" + index + "-" + option + ".txt";
+        resultTargetText = File.ReadAllText(resultsFilePath);
+
         if (index == 1)
         {
             if (option == 1)
@@ -101,16 +111,6 @@ public class TextHandler : MonoBehaviour
                 gameHandler.ReduceBoard();
             }
         }
-
-        ResultsText(option);
-
-        StartCoroutine(AutoTextNoOptions());
-    }
-
-    private void ResultsText(int option)
-    {
-        string resultsFilePath = Application.dataPath + "/Text/Result" + index + "-" + option + ".txt";
-        resultTargetText = File.ReadAllText(resultsFilePath);
     }
 
     public void AdvanceQuarter()
@@ -137,6 +137,8 @@ public class TextHandler : MonoBehaviour
 
         option1Text.GetComponentInChildren<Text>().text = File.ReadAllText(option1Path);
         option2Text.GetComponentInChildren<Text>().text = File.ReadAllText(option2Path);
+
+        StartCoroutine(AutoText());
     }
 
     IEnumerator AutoText()

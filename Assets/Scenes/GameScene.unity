@@ -2178,7 +2178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2186,6 +2186,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
@@ -2197,11 +2201,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 597167741}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1989006143}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
@@ -2213,6 +2225,10 @@ PrefabInstance:
       value: FadeIn
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AdvanceQuarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameHandling, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -2221,11 +2237,19 @@ PrefabInstance:
       value: GameHandling, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TextHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969582812630730086, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7351956402444847462, guid: 15d69e807efd9d646b270b6b5a7ce981, type: 3}
