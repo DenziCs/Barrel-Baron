@@ -180,8 +180,9 @@ public class TextHandler : MonoBehaviour
             yield return new WaitForSeconds (letterPause);
         }
 
-        gameHandler.FadeOut();
+        yield return new WaitForSeconds (2.0f);
 
+        gameHandler.FadeOut();
         StartCoroutine(AutoResultsText());
 
         yield return null;
