@@ -104,12 +104,12 @@ public class TextHandler : MonoBehaviour
         {
             if (option == 1)
             {
-                gameHandler.AddBoard();
+                gameHandler.ReduceMoney();
+                gameHandler.ReduceBoard();
             }
             if (option == 2)
             {
-                gameHandler.ReduceMoney();
-                gameHandler.ReduceBoard();
+                gameHandler.AddBoard();
             }
         }
         if (index == 4)
